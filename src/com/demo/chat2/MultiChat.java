@@ -8,7 +8,7 @@ import java.net.Socket;
 
 /**
  * Server of chatroom
- * Goal: to make a server where client can send and receive message
+ * Goal: to make a server where client can send and receive multiple message
  */
 
 public class MultiChat {
