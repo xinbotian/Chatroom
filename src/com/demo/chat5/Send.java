@@ -1,4 +1,4 @@
-package com.demo.chat3;
+package com.demo.chat5;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -19,14 +19,17 @@ public class Send implements Runnable {
     private DataOutputStream dos;
     private Socket client;
     private boolean isRunning;
-    public Send(Socket client){
+    private  String name;
+    public Send(Socket client, String name){
         this.client = client;
         console = new BufferedReader(new InputStreamReader(System.in));
         this.isRunning = true;
         try {
             dos = new DataOutputStream(client.getOutputStream());
-        }catch (IOException e){
-            System.out.println("===1===");;
+            //send name
+            send(name);
+        }catch(IOException e){
+            System.out.println("===1===");
         }
     }
     @Override

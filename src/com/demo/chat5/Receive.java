@@ -1,8 +1,9 @@
-package com.demo.chat3;
+package com.demo.chat5;
 
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.net.Socket;
+
 /**
  * Encapsulated with multithreading: receiving
  * 1. receive message
